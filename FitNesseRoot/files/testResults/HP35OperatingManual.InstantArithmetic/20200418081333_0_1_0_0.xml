@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20160618</FitNesseVersion>
+  <rootPath>HP35OperatingManual.InstantArithmetic</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>5</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <date>2020-04-18T08:13:34+01:00</date>
+    <runTimeInMillis>6</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;h1&gt;Instant Arithmetic&lt;/h1&gt;
+In the HP-35, arithmetic answers appear immediatly after pressing a '+', '-' 'x' or '÷' key.&lt;br/&gt;&lt;br/&gt;Try these examples. It is &lt;b&gt;not &lt;/b&gt;necessary to clear the machine between problems, but if you make an entry mistake, press 'CL X' (&lt;b&gt;CL&lt;/b&gt;EAR X) and enter the number correctly.&lt;br/&gt;&lt;br/&gt;To add 3 to 12&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="slimRowTitle"&gt;
+		&lt;td&gt;script&lt;/td&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;HP35 driver&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="2"&gt;1.&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;see&lt;/td&gt;
+		&lt;td&gt;[.] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;1&lt;/span&gt;&lt;span class="fail"&gt;.]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="2"&gt;2.&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;see&lt;/td&gt;
+		&lt;td&gt;[.] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;12&lt;/span&gt;&lt;span class="fail"&gt;.]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="2"&gt;ENTER&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;see&lt;/td&gt;
+		&lt;td&gt;[&lt;span class="diff"&gt;ENTER&lt;/span&gt;] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;12.&lt;/span&gt;&lt;span class="fail"&gt;]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="2"&gt;3.&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;see&lt;/td&gt;
+		&lt;td&gt;[.] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;3&lt;/span&gt;&lt;span class="fail"&gt;.]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor7"&gt;
+		&lt;td&gt;press&lt;/td&gt;
+		&lt;td colspan="2"&gt;+&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr class="slimRowColor0"&gt;
+		&lt;td&gt;check&lt;/td&gt;
+		&lt;td&gt;see&lt;/td&gt;
+		&lt;td&gt;[.] &lt;span class="fail"&gt;expected [&lt;/span&gt;&lt;span class="diff"&gt;15&lt;/span&gt;&lt;span class="fail"&gt;.]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</content>
+    <relativePageName>InstantArithmetic</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_0', instruction='make', instanceName='scriptTableActor', className='HP35Driver', args=[]}</instruction>
+        <slimResult>pass(HP35 driver)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_0_0</instructionId>
+                    <col>1</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>HP35 driver</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_1', instruction='call', instanceName='scriptTableActor', methodName='press', args=[1.]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_1</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_2', instruction='call', instanceName='scriptTableActor', methodName='see', args=[]}</instruction>
+        <slimResult>fail(a=.;e=1.)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_0_2</instructionId>
+                    <col>2</col>
+                              <row>2</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>.</actual>
+                              <expected>1.</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_3', instruction='call', instanceName='scriptTableActor', methodName='press', args=[2.]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_3</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_4', instruction='call', instanceName='scriptTableActor', methodName='see', args=[]}</instruction>
+        <slimResult>fail(a=.;e=12.)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_0_4</instructionId>
+                    <col>2</col>
+                              <row>4</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>.</actual>
+                              <expected>12.</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_5', instruction='call', instanceName='scriptTableActor', methodName='press', args=[ENTER]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_5</instructionId>
+                    <col>0</col>
+                              <row>5</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_6', instruction='call', instanceName='scriptTableActor', methodName='see', args=[]}</instruction>
+        <slimResult>fail(a=ENTER;e=12.)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_0_6</instructionId>
+                    <col>2</col>
+                              <row>6</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>ENTER</actual>
+                              <expected>12.</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_7', instruction='call', instanceName='scriptTableActor', methodName='press', args=[3.]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_7</instructionId>
+                    <col>0</col>
+                              <row>7</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_8', instruction='call', instanceName='scriptTableActor', methodName='see', args=[]}</instruction>
+        <slimResult>fail(a=.;e=3.)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_0_8</instructionId>
+                    <col>2</col>
+                              <row>8</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>.</actual>
+                              <expected>3.</expected>
+                            </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_9', instruction='call', instanceName='scriptTableActor', methodName='press', args=[+]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_0_9</instructionId>
+                    <col>0</col>
+                              <row>9</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_0_10', instruction='call', instanceName='scriptTableActor', methodName='see', args=[]}</instruction>
+        <slimResult>fail(a=.;e=15.)</slimResult>
+                <expectation>
+                    <status>fail</status>
+                    <instructionId>scriptTable_0_10</instructionId>
+                    <col>2</col>
+                              <row>10</row>
+                    <type>ReturnedValueExpectation</type>
+                    <actual>.</actual>
+                              <expected>15.</expected>
+                            </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:./OCSlimProjectTestRunner.sh</testSystem>
+    <command>./OCSlimProjectTestRunner.sh 8090</command>
+    <exitCode>0</exitCode>
+    <stdOut>[OCSP_RUN] == RunSlimTestTargetWithSlimPort~iOS:8090 Sat 18 Apr 2020 08:13:33 BST==
+[OCSP_RUN] Info: Test System Suggested SDK: 13.4
+[OCSP_RUN] Info: Test System Path: /Users/paulstringer/Library/Developer/Xcode/DerivedData/HP35Calc-fggfnloctjeskgedyejjfzgeijhv/Build/Products/Debug-iphonesimulator/HP35FitnesseHost.app
+[OCSP_RUN] Start Slim Test Sytem
+[OCSP_SIMCTL] == Launching Slim Host App @(#)PROGRAM:simctl  PROJECT:CoreSimulator-704.12.1  ==
+    iPhone 11 Pro Max (9D9C96E7-62F0-49E3-9944-89D2EC127870) (Booted) 
+[OCSP_SIMCTL] Installing App Identifier:com.cleancoders.acceptancetesting.HP35FitnesseHost
+[OCSP_SIMCTL] Launching... (App Identifer:com.cleancoders.acceptancetesting.HP35FitnesseHost, Slim Port: 8090)
+[OCSP_RUN] Waiting for Slim System... (41623) Sat 18 Apr 2020 08:13:34 BST
+  PID TTY           TIME CMD
+41623 ??         0:00.03 /Users/paulstringer/Library/Developer/CoreSimulator/Devices/9D9C96E7-62F0-49E3-9944-89D2EC127870/data/Containers/Bundle/Application/72D83364-D66C-4F92-8DCB-E7C44AABD528/HP35FitnesseHost.app/HP35FitnesseHost 8090
+  PID TTY           TIME CMD
+[OCSP_RUN] Slim System Exited Sat 18 Apr 2020 08:13:35 BST
+[OCSP_RUN] Slim Test System Exited Normally
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>1</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>2183</totalRunTimeInMillis>
+</testResults>
+

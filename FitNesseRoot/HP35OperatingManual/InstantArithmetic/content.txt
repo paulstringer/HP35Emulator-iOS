@@ -1,0 +1,18 @@
+!1 Instant Arithmetic
+In the HP-35, arithmetic answers appear immediatly after pressing a '+', '-' 'x' or '÷' key.
+
+Try these examples. It is '''not '''necessary to clear the machine between problems, but if you make an entry mistake, press 'CL X' ('''CL'''EAR X) and enter the number correctly.
+
+To add 3 to 12
+
+| script | HP35 driver |
+| press | 1 |
+| check | see | 1. |
+| press | 2 |
+| check | see | 12. |
+| press | ENTER |
+| check | see | 12. |
+| press | 3 |
+| check | see | 3. |
+| press | + |
+| check | see | 15. |

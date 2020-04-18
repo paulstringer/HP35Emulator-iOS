@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20160618</FitNesseVersion>
+  <rootPath>OCSlimProjectExamplePage.TestPage</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>2</exceptions>
+    </counts>
+    <date>2020-04-18T07:26:48+01:00</date>
+    <runTimeInMillis>7</runTimeInMillis>
+    <content>&lt;br/&gt;&lt;h1&gt;OCSlimProject Example Test Page&lt;/h1&gt;
+&lt;br/&gt;Below is a simple Decision Table based Acceptance Test. It sends input to an instance of a Fixture which is implemented in your Xcode project. This is done by adding a class of the same name e.g. 'FixtureExample.swift' to your Acceptance Test target. &lt;br/&gt;&lt;br/&gt;The first column 'input' will set a property of the same name. The expected 'output?' denoted by columns with '?' at the end of the property name are returned by your Fixture and verified against the expected value in that column.&lt;br/&gt;&lt;br/&gt;Click 'Test' to run this page and see this in action. After that check out &lt;i&gt;FixtureExample.swift&lt;/i&gt; in your Xcode project to see the 'FixtureExample.swift' implementation.&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td colspan="2"&gt;&lt;span class="pass"&gt;Fixture Example&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;input&lt;/td&gt;
+		&lt;td&gt;output?&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;foo&lt;/td&gt;
+		&lt;td&gt;bar &lt;span class="error"&gt;Method output not found in FixtureExample.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;bar&lt;/td&gt;
+		&lt;td&gt;baz &lt;span class="error"&gt;Method output not found in FixtureExample.&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;</content>
+    <relativePageName>TestPage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_0', instruction='make', instanceName='decisionTable_0', className='FixtureExample', args=[]}</instruction>
+        <slimResult>pass(Fixture Example)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>decisionTable_0_0</instructionId>
+                    <col>0</col>
+                              <row>0</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Fixture Example</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_4', instruction='call', instanceName='decisionTable_0', methodName='setInput', args=[foo]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_0_4</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_6', instruction='call', instanceName='decisionTable_0', methodName='output', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_0_6</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>Method output not found in FixtureExample.</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_8', instruction='call', instanceName='decisionTable_0', methodName='setInput', args=[bar]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>decisionTable_0_8</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>VoidReturnExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='decisionTable_0_10', instruction='call', instanceName='decisionTable_0', methodName='output', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>decisionTable_0_10</instructionId>
+                              <type>ReturnedValueExpectation</type>
+                                        <evaluationMessage>Method output not found in FixtureExample.</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+  <executionLog>
+    <testSystem>slim:./OCSlimProjectTestRunner.sh</testSystem>
+    <command>./OCSlimProjectTestRunner.sh 8086</command>
+    <exitCode>0</exitCode>
+    <stdOut>[OCSP_RUN] == RunSlimTestTargetWithSlimPort~iOS:8086 Sat 18 Apr 2020 07:26:47 BST==
+[OCSP_RUN] Info: Test System Suggested SDK: 13.4
+[OCSP_RUN] Info: Test System Path: /Users/paulstringer/Library/Developer/Xcode/DerivedData/HP35Calc-fggfnloctjeskgedyejjfzgeijhv/Build/Products/Debug-iphonesimulator/HP35FitnesseHost.app
+[OCSP_RUN] Start Slim Test Sytem
+[OCSP_SIMCTL] == Launching Slim Host App @(#)PROGRAM:simctl  PROJECT:CoreSimulator-704.12.1  ==
+    iPhone 11 Pro Max (9D9C96E7-62F0-49E3-9944-89D2EC127870) (Booted) 
+[OCSP_SIMCTL] Installing App Identifier:com.cleancoders.acceptancetesting.HP35FitnesseHost
+[OCSP_SIMCTL] Launching... (App Identifer:com.cleancoders.acceptancetesting.HP35FitnesseHost, Slim Port: 8086)
+[OCSP_RUN] Waiting for Slim System... (40523) Sat 18 Apr 2020 07:26:48 BST
+  PID TTY           TIME CMD
+40523 ??         0:00.03 /Users/paulstringer/Library/Developer/CoreSimulator/Devices/9D9C96E7-62F0-49E3-9944-89D2EC127870/data/Containers/Bundle/Application/EDEBA7FA-5268-4AA1-A88F-2ACB2530E0E1/HP35FitnesseHost.app/HP35FitnesseHost 8086
+  PID TTY           TIME CMD
+[OCSP_RUN] Slim System Exited Sat 18 Apr 2020 07:26:49 BST
+[OCSP_RUN] Slim Test System Exited Normally
+</stdOut>
+    <stdErr></stdErr>
+  </executionLog>
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1974</totalRunTimeInMillis>
+</testResults>
+
