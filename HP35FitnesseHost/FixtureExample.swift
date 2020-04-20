@@ -20,7 +20,7 @@ class HP35Driver : NSObject {
 
 class HP35Calculator {
 
-    public enum Key: String {
+    public enum DigitKey: String {
         case one = "1", two = "2", three = "3"
     }
 
@@ -31,7 +31,7 @@ class HP35Calculator {
     private var y : Int?
     private var x = 0
 
-    private func digitKeyPress(_ key: Key) {
+    private func press(_ key: DigitKey) {
         if y == nil {
             x = Int( "\(x)\(key.rawValue)" ) ?? 0
         } else {
@@ -39,7 +39,7 @@ class HP35Calculator {
         }
     }
 
-    private func arithmeticKeyPress (_ key: ArithmeticKey) {
+    private func press (_ key: ArithmeticKey) {
         switch key {
         case .ENTER:
             y = x
@@ -51,8 +51,11 @@ class HP35Calculator {
     }
 
     public func keyPress(_ key: String) {
-        if let digitKey = Key(rawValue: key) {  digitKeyPress(digitKey) }
-        if let arithmeticKey = ArithmeticKey(rawValue: key ) { arithmeticKeyPress(arithmeticKey) }
+        if let digitKey = DigitKey(rawValue: key) {
+            press(digitKey)
+        } else if let arithmeticKey = ArithmeticKey(rawValue: key ) {
+            press(arithmeticKey)
+        }
     }
 
     public var display : String {
