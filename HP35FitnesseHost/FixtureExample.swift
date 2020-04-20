@@ -21,20 +21,43 @@ class HP35Driver : NSObject {
 class HP35Calculator {
 
     public enum Key: String {
-        case zero = "0", one = "1", two = "2", three = "3", ENTER, PLUS = "+"
+        case one = "1", two = "2", three = "3"
     }
 
-    public var display : String { return x ?? "." }
+    public enum ArithmeticKey: String {
+        case ENTER, PLUS = "+", SUBTRACT = "-"
+    }
 
-    private var x: String?
+    private var y : Int?
+    private var x = 0
 
-    public func keyPress(_ key: Key) {
-        x = key.rawValue + "."
+    private func digitKeyPress(_ key: Key) {
+        if y == nil {
+            x = Int( "\(x)\(key.rawValue)" ) ?? 0
+        } else {
+            x = Int(key.rawValue)!
+        }
+    }
+
+    private func arithmeticKeyPress (_ key: ArithmeticKey) {
+        switch key {
+        case .ENTER:
+            y = x
+        case .PLUS:
+            x = (y ?? 0) + x
+        case .SUBTRACT:
+            x = (y ?? 0) - x
+        }
     }
 
     public func keyPress(_ key: String) {
-        guard let key = Key(rawValue: key) else { return }
-        keyPress(key)
+        if let digitKey = Key(rawValue: key) {  digitKeyPress(digitKey) }
+        if let arithmeticKey = ArithmeticKey(rawValue: key ) { arithmeticKeyPress(arithmeticKey) }
+    }
+
+    public var display : String {
+        guard x > 0 else { return  "." }
+        return "\(x)."
     }
 
 }
