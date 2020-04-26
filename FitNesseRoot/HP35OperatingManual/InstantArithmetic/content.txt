@@ -3,8 +3,7 @@ In the HP-35, arithmetic answers appear immediatly after pressing a '+', '-' 'x'
 
 Try these examples. It is '''not '''necessary to clear the machine between problems, but if you make an entry mistake, press 'CL X' ('''CL'''EAR X) and enter the number correctly.
 
-To add 3 to 12
-
+!3 To add 3 to 12
 | script | HP35 driver |
 | press | 1 |
 | check | see | 1. |
@@ -17,8 +16,7 @@ To add 3 to 12
 | press | + |
 | check | see | 15. |
 
-To subtract 3 from 12
-
+!3 To subtract 3 from 12
 | script | HP35 driver |
 | press | 1 |
 | check | see | 1. |
@@ -29,4 +27,48 @@ To subtract 3 from 12
 | press | 3 |
 | check | see | 3. |
 | press | - |
+| check | see | 9. |
+
+!3 To multiply 3 times 12
+| script | HP35 driver |
+| press | 1 |
+| check | see | 1. |
+| press | 2 |
+| check | see | 12. |
+| press | ENTER |
+| check | see | 12. |
+| press | 3 |
+| check | see | 3. |
+| press | x |
+| check | see | 36. |
+
+!3 To divide 3 into 12
+| script | HP35 driver |
+| press | 1 |
+| check | see | 1. |
+| press | 2 |
+| check | see | 12. |
+| press | ENTER |
+| check | see | 12. |
+| press | 3 |
+| check | see | 3. |
+| press | ÷ |
+| check | see | 4. |
+
+The ENTER key repeats the number 
+
+!3 To double 3
+| script | HP35 driver |
+| press | 3 |
+| check | see | 3. |
+| press | ENTER |
+| press | + |
+| check | see | 6. |
+
+!3 To square 3
+| script | HP35 driver |
+| press | 3 |
+| check | see | 3. |
+| press | ENTER |
+| press | x |
 | check | see | 9. |

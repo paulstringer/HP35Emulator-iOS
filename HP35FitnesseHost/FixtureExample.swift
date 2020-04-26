@@ -22,7 +22,7 @@ class HP35Driver : NSObject {
 class HP35Calculator {
 
     public enum FunctionKey: String {
-        case ENTER, PLUS = "+", MINUS = "-"
+        case ENTER, PLUS = "+", MINUS = "-", MULTIPLY = "x", DIVIDE = "÷"
     }
 
     private var y : Int?
@@ -41,9 +41,13 @@ class HP35Calculator {
         case .ENTER:
             y = x
         case .PLUS:
-            x += (y ?? 0 )
+            x = (y ?? 0 ) + x
         case .MINUS:
             x = (y ?? 0) - x
+        case .MULTIPLY:
+            x = (y ?? 0) * x
+        case .DIVIDE:
+            x = (y ?? 0) / x
         }
     }
 
