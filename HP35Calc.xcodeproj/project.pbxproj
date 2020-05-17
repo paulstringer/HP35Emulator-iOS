@@ -17,6 +17,10 @@
 		8C98DB8024458A5E0011057B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C98DB7F24458A5E0011057B /* Assets.xcassets */; };
 		8C98DB8324458A5E0011057B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C98DB8124458A5E0011057B /* LaunchScreen.storyboard */; };
 		8C98DB8E24458A5E0011057B /* HP35CalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98DB8D24458A5E0011057B /* HP35CalcTests.swift */; };
+		8C9C9D73247166CE004D149D /* HP35.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C9D72247166CE004D149D /* HP35.js */; };
+		8C9C9D74247166CE004D149D /* HP35.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C9C9D72247166CE004D149D /* HP35.js */; };
+		8C9C9D7624716B6F004D149D /* HP35JSDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C9D7524716B6F004D149D /* HP35JSDriver.swift */; };
+		8C9C9D7724716B6F004D149D /* HP35JSDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9C9D7524716B6F004D149D /* HP35JSDriver.swift */; };
 		94DA481FF1C6CDB97E850AA2 /* Pods_HP35Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E271C2AFFE2E6A0EC7C78B5 /* Pods_HP35Calc.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,8 @@
 		8C98DB8924458A5E0011057B /* HP35CalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HP35CalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C98DB8D24458A5E0011057B /* HP35CalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP35CalcTests.swift; sourceTree = "<group>"; };
 		8C98DB8F24458A5E0011057B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9C9D72247166CE004D149D /* HP35.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = HP35.js; sourceTree = "<group>"; };
+		8C9C9D7524716B6F004D149D /* HP35JSDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HP35JSDriver.swift; sourceTree = "<group>"; };
 		8F2D8250908D8AD82735F0AA /* Pods-HP35AcceptanceTestHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HP35AcceptanceTestHost.release.xcconfig"; path = "Target Support Files/Pods-HP35AcceptanceTestHost/Pods-HP35AcceptanceTestHost.release.xcconfig"; sourceTree = "<group>"; };
 		BC3DB633F6371E946E97B5DB /* Pods-HP35FitnesseHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HP35FitnesseHost.release.xcconfig"; path = "Target Support Files/Pods-HP35FitnesseHost/Pods-HP35FitnesseHost.release.xcconfig"; sourceTree = "<group>"; };
 		BDB51C470B8551DA62E7C76E /* libPods-HP35FitnesseHost.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HP35FitnesseHost.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +159,8 @@
 				8C98DB7F24458A5E0011057B /* Assets.xcassets */,
 				8C98DB8124458A5E0011057B /* LaunchScreen.storyboard */,
 				8C98DB8424458A5E0011057B /* Info.plist */,
+				8C9C9D72247166CE004D149D /* HP35.js */,
+				8C9C9D7524716B6F004D149D /* HP35JSDriver.swift */,
 			);
 			path = HP35Calc;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9C9D74247166CE004D149D /* HP35.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +289,7 @@
 			files = (
 				8C98DB8324458A5E0011057B /* LaunchScreen.storyboard in Resources */,
 				8C98DB8024458A5E0011057B /* Assets.xcassets in Resources */,
+				8C9C9D73247166CE004D149D /* HP35.js in Resources */,
 				8C98DB7E24458A5C0011057B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +375,7 @@
 			files = (
 				8C5299CD244AD0F3006D973C /* FixtureExample.swift in Sources */,
 				8C5299CB244AD0F3006D973C /* HP35FitnesseHost.m in Sources */,
+				8C9C9D7724716B6F004D149D /* HP35JSDriver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +385,7 @@
 			files = (
 				8C98DB7B24458A5C0011057B /* ViewController.swift in Sources */,
 				8C98DB7724458A5C0011057B /* AppDelegate.swift in Sources */,
+				8C9C9D7624716B6F004D149D /* HP35JSDriver.swift in Sources */,
 				8C98DB7924458A5C0011057B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

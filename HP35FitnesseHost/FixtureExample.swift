@@ -4,12 +4,13 @@ import Foundation
 
 class HP35Driver : NSObject {
 
-    let hp35 = HP35Calculator()
+    let hp35 = HP35CalculatorJS()
 
     @objc
     func press(_ rawValue: String) {
         if let digitKey = Int(rawValue) { hp35.press(digitKey) }
-        if let functionKey = HP35Calculator.FunctionKey(rawValue: rawValue) { hp35.press(functionKey) }
+        if let functionKey = HP35FunctionKey(rawValue: rawValue) { hp35.press(functionKey)
+        }
     }
 
     @objc
@@ -18,12 +19,35 @@ class HP35Driver : NSObject {
     }
 }
 
+public enum HP35FunctionKey: String {
+    case ENTER, ADD = "+", SUBTRACT = "-", MULTIPLY = "x", DIVIDE = "÷"
+}
 
-class HP35Calculator {
+protocol HP35Calculator {
+    func press(_ key: Int)
+    func press(_ key: HP35FunctionKey)
+    var display: String { get }
+}
 
-    public enum FunctionKey: String {
-        case ENTER, PLUS = "+", MINUS = "-", MULTIPLY = "x", DIVIDE = "÷"
+class HP35CalculatorJS: HP35Calculator  {
+
+    let jsCalculator = HP35JSDriver()
+
+    func press(_ num: Int) {
+        jsCalculator.press(num)
     }
+
+    func press(_ key: HP35FunctionKey) {
+        jsCalculator.press("\(key)".lowercased())
+    }
+
+    var display: String {
+        return jsCalculator.value ?? ""
+    }
+
+}
+
+class HP35CalculatorSwift: HP35Calculator {
 
     private var y : Int?
     private var x = 0
@@ -36,13 +60,13 @@ class HP35Calculator {
         }
     }
 
-    public func press(_ key: FunctionKey) {
+    public func press(_ key: HP35FunctionKey) {
         switch key {
         case .ENTER:
             y = x
-        case .PLUS:
+        case .ADD:
             x = (y ?? 0 ) + x
-        case .MINUS:
+        case .SUBTRACT:
             x = (y ?? 0) - x
         case .MULTIPLY:
             x = (y ?? 0) * x

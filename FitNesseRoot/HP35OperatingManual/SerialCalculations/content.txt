@@ -1,0 +1,51 @@
+!1 Serial Calculations
+Whenever a new number is entered after any calclation, the HP-35 perfors an automatic '''ENTER '''before accepting the new number. This means that the previous answer and the new entry are both in position for the next arithmetic operation.
+
+!2 Examples
+!3 Find the sum of the first five odd numbers
+
+| script | HP35Driver |
+| press | 1 |
+| check | see | 1. |
+| press | ENTER |
+| check | see | 1. |
+| press | 3 |
+| check | see | 3. |
+| press | + |
+| check | see | 4. |
+| press | 5 |
+| check | see | 5. |
+| press | + |
+| check | see | 9. |
+| press | 7 |
+| check | see | 7. |
+| press | + |
+| check | see | 16. |
+| press | 9 |
+| check | see | 9. |
+| press | + |
+| check | see | 25. |
+
+!3 Find the sum of the first five odd numbers
+
+| script | HP35Driver |
+| press | 2 |
+| check | see | 2. |
+| press | ENTER |
+| check | see | 2. |
+| press | 4 |
+| check | see | 4. |
+| press | x |
+| check | see | 8. |
+| press | 6 |
+| check | see | 6. |
+| press | x |
+| check | see | 48. |
+| press | 8 |
+| check | see | 8. |
+| press | x |
+| check | see | 384. |
+| press | 10 |
+| check | see | 10. |
+| press | x |
+| check | see | 3840. |
