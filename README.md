@@ -6,7 +6,7 @@ To build and run the acceptance tests after a fresh clone follow these steps:
 - Install the OCSlimProject dependancy which requires CocoaPods ([CocoaPods Install](https://cocoapods.org))
 ```
 $ sudo gem install cocoapods (if required)
-$ cd HP35Calc
+$ cd HP35Emulator-iOS-master
 $ pod install
 ```
 - Open HP35Calc.xcworkspace
@@ -14,7 +14,6 @@ $ pod install
 - Build (Apple-B)
 - Go to this directory in your Terminal and launch Fitnesse
 ```
-   cd HP35Calc
    ./LaunchFitnesse
 ```
 - Click on HP-35 Operating Manual
