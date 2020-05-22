@@ -3,7 +3,6 @@ Whenever a new number is entered after any calclation, the HP-35 perfors an auto
 
 !2 Examples
 !3 Find the sum of the first five odd numbers
-
 | script | HP35Driver |
 | press | 1 |
 | check | see | 1. |
@@ -27,7 +26,6 @@ Whenever a new number is entered after any calclation, the HP-35 perfors an auto
 | check | see | 25. |
 
 !3 Find the sum of the first five odd numbers
-
 | script | HP35Driver |
 | press | 2 |
 | check | see | 2. |
@@ -49,3 +47,35 @@ Whenever a new number is entered after any calclation, the HP-35 perfors an auto
 | check | see | 10. |
 | press | x |
 | check | see | 3840. |
+
+If you were calculating ((2 + 3)/(4 + 5)*6 by hand, you would first add 2 and 3, then divide the sum by 4, add 5 to the quotient and finally multiply by 6. This is exactly what you do on the HP-35:
+
+!3 ((2 + 3)/(4 + 5)*6
+
+| script | HP35Driver |
+| press | 2 |
+| check | see | 2. |
+| press | ENTER |
+| check | see | 2. |
+| press | 3 |
+| check | see | 3. |
+| press | + |
+| check | see | 5. |
+| press | 4 |
+| check | see | 4. |
+| press | ÷ |
+| check | see | 1.25 |
+| press | 5 |
+| check | see | 5. |
+| press | + |
+| check | see | 6.25 |
+| press | 6 |
+| check | see | 6. |
+| press | x |
+| check | see | 37.5 |
+
+
+
+
+
+

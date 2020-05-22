@@ -1,34 +1,45 @@
-//
-//  HP35CalcTests.swift
-//  HP35CalcTests
-//
-//  Created by paulstringer on 14/04/2020.
-//  Copyright © 2020 Clean Coders. All rights reserved.
-//
-
 import XCTest
 @testable import HP35Calc
 
 class HP35CalcTests: XCTestCase {
 
+    var driver: HP35JSDriver!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        driver = HP35JSDriver()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func testStateEmpty() {
+        XCTAssertEqual("0.", driver.value)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPressOneSeeOneDot() {
+        driver.press(1)
+        XCTAssertEqual("1.", driver.value)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testPressOnePlusOneEqualsTwo() {
+         driver.press(1)
+         driver.press("enter")
+         driver.press(1)
+         driver.press("add")
+         XCTAssertEqual("2.", driver.value)
+     }
+
+    func testPressOneDivideByTwo() {
+        driver.press(1)
+        driver.press("enter")
+        driver.press(2)
+        driver.press("divide")
+        XCTAssertEqual(".5", driver.value)
+    }
+
+    func testComplexDivide() {
+        driver.press(1)
+        driver.press("enter")
+        driver.press(2)
+        driver.press("divide")
+        XCTAssertEqual(".5", driver.value)
     }
 
 }

@@ -1,3 +1,28 @@
+// Power mode
+var power_mode = 1;
+
+function display() {
+  // Print the contents of 'd' onto the LED display.
+  var srcs = new Array();
+  for (count = 0; count < 16 ; count++) {
+    digit = d.charAt(count);
+    if (digit && "0123456789".indexOf(digit) != -1)
+      srcs[count] = "led-"+digit+".gif";
+    else if ("." == digit)
+      srcs[count] = "led-decimal.gif";
+    else if ("-" == digit)
+      srcs[count] = "led-minus.gif";
+    else if ("X" == digit)
+      srcs[count] = "led-error1.gif";
+    else if ("x" == digit)
+      srcs[count] = "led-error2.gif";
+    else
+      srcs[count] = "led.jpg";
+    if (!power_mode)
+      srcs[count] = "led.jpg";
+  }
+}
+
 // The Global Registers
 var x; // 1st register (mapped onto the display)
 var y; // 2nd register
@@ -407,3 +432,9 @@ function key_num(num) {
   d2x();
   arc = 0;
 }
+
+function about() {
+  alert('HP-35 simulator in JavaScript\nfor the HP Museum (http://hpmuseum.org)\nby Neil Fraser (http://neil.fraser.name)\nMarch 2004, Elgin, Scotland.');
+}
+
+key_clr();

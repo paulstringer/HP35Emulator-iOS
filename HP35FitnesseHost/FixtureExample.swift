@@ -4,11 +4,13 @@ import Foundation
 
 class HP35Driver : NSObject {
 
-    let hp35 = HP35CalculatorJS()
+    let hp35 = HP35_JS()
 
     @objc
     func press(_ rawValue: String) {
-        if let digitKey = Int(rawValue) { hp35.press(digitKey) }
+        if let digitKey = Int(rawValue) {
+            hp35.press(digitKey)
+        }
         if let functionKey = HP35FunctionKey(rawValue: rawValue) { hp35.press(functionKey)
         }
     }
@@ -23,13 +25,13 @@ public enum HP35FunctionKey: String {
     case ENTER, ADD = "+", SUBTRACT = "-", MULTIPLY = "x", DIVIDE = "÷"
 }
 
-protocol HP35Calculator {
+protocol HP35 {
     func press(_ key: Int)
     func press(_ key: HP35FunctionKey)
     var display: String { get }
 }
 
-class HP35CalculatorJS: HP35Calculator  {
+class HP35_JS: HP35  {
 
     let jsCalculator = HP35JSDriver()
 
@@ -47,7 +49,7 @@ class HP35CalculatorJS: HP35Calculator  {
 
 }
 
-class HP35CalculatorSwift: HP35Calculator {
+class HP35_Swift: HP35 {
 
     private var y : Int?
     private var x = 0
