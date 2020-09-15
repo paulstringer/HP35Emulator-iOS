@@ -1,3 +1,4 @@
+|HP35OperatingManual.SumsOfProducts||09:58:44 Thu, Sep 10, 2020|
 |HP35OperatingManual.SerialCalculations||20:45:57 Thu, May 21, 2020|
 |HP35OperatingManual||07:25:10 Wed, May 20, 2020|
 |HP35OperatingManual.InstantArithmetic||15:27:41 Sun, Apr 26, 2020|
