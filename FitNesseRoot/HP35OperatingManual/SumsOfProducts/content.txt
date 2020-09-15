@@ -1,0 +1,53 @@
+<test page>
+
+!1 Sums of Products
+
+Suppose you sold 12 items at $1.58 each. 8 items at $2.67 each and 16 items at SO.54 each. The total sale price is
+
+(12 x 1.58) + (8 x 2.67) + (16 x 0.54)
+
+Your HP-35 lets you find the answer without writing down or storing intermediate results.
+
+|Script|HP35 driver|
+|press |12         |
+|check |see |12.   |
+|press |ENTER      |
+|check |see |12.   |
+|press |1.58       |
+|check |see |1.58  |
+|press |x          |
+|check |see |18.96 |
+|press |8          |
+|check |see |8.    |
+|press |ENTER      |
+|check |see |8.    |
+|press |2.67       |
+|check |see |2.67  |
+|press |x          |
+|check |see |21.36 |
+|press |+          |
+|check |see |40.32 |
+|press |16         |
+|check |see |16.   |
+|press |ENTER      |
+|check |see |16.   |
+|press |.54        |
+|check |see |.54   |
+|press |x          |
+|check |see |8.64  |
+|press |+          |
+|check |see |48.96 |
+
+
+Simple experiment to check if decimals is the issue.
+
+|Script|HP35 driver|
+|press |12         |
+|check |see  |12.  |
+|press |ENTER      |
+|check |see  |12.  |
+|press |6          |
+|check |see  |6.   |
+|press |x          |
+|check |see  |72.  |
+
