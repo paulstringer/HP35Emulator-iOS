@@ -14,7 +14,7 @@ protocol HP35Fixture {
 
 class HP35Driver : NSObject {
 
-    let hp35 = HP35JSFixture()
+    let hp35: HP35Fixture = HP35JSFixture()
 
     @objc
     func press(_ rawValue: String) {
